@@ -1,16 +1,21 @@
 # Advent of Code 2017
 # Day 01: "Inverse Captcha" (Python)
 
-import common
+from common import *
 
 def solve(input):
-    return 9
+    result=0
+    input=input + input[0]
+    for x in range(len(input) - 1):
+        if input[x] == input[(x + 1)]:
+            result += int(input[x])
+    return result
 
 class Tests():
     import pytest
-    
+
     def test_example_1(x):
-        assert solve('1122') == 9
+        assert solve('1122') == 3
 
     def test_example_2(x):
         assert solve('1111') == 4
