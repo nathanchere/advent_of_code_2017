@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using System.ComponentModel;
+using System.Reflection;
 
 namespace Aoc2017
 {
@@ -6,13 +9,22 @@ namespace Aoc2017
     {
         static string GetInput(string day)
         {
-          return "OK";
+          return File.ReadAllText($"../../challenges/{day}.input");
         }
 
         static void Main(string[] args)
         {
-            // Call with for example day01
-            Console.WriteLine(GetInput(args[0]));
+          var day = args[0];
+          var type = Assembly.GetEntryAssembly().GetType("Aoc2017.day01");
+          var solution = (ISolution)Activator.CreateInstance(type);
+          var result = solution.PartOne(GetInput(day));
+          Console.WriteLine(result);
         }
+    }
+
+    public interface ISolution
+    {
+      string PartOne(string input);
+      string PartTwo(string input);
     }
 }

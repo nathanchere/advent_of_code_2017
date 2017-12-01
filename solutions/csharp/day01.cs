@@ -3,22 +3,36 @@
 
 using Xunit;
 
-public class Day01
+namespace Aoc2017
 {
-  static string PartOne(string input)
+  public class day01 : Solution
   {
-    return input;
-  }
+    public string PartOne(string input)
+    {
+      return input;
+    }
 
-  [Fact]
-  public void PassingTest()
-  {
-    //  Assert.Equal(4, Add(2, 2));
-  }
+    public string PartTwo(string input)
+    {
+      return input;
+    }
 
-  [Fact]
-  public void FailingTest()
-  {
-      //Assert.Equal(5, Add(2, 2));
+    [Fact]
+    public void Example01()
+    {
+      //  Assert.Equal(4, Add(2, 2));
+    }
+
+    [Fact]
+    public void FailingTest()
+    {
+        //Assert.Equal(5, Add(2, 2));
+    }
+
+    [Fact]
+    public void FailingTest()
+    {
+        //Assert.Equal(5, Add(2, 2));
+    }
   }
 }
