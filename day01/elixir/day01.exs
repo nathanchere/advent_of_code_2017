@@ -1,5 +1,5 @@
 # Advent of Code 2017
-# Day 01: "Inverse Captcha"
+# Day 01: "Inverse Captcha" (Elixir)
 
 defmodule Day01 do
 
