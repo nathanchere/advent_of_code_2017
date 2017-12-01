@@ -17,14 +17,13 @@ namespace Aoc2017
           var day = args[0];
           var type = Assembly.GetEntryAssembly().GetType("Aoc2017.day01");
           var solution = (ISolution)Activator.CreateInstance(type);
-          var result = solution.PartOne(GetInput(day));
+          var result = solution.Solve(GetInput(day));
           Console.WriteLine(result);
         }
     }
 
     public interface ISolution
     {
-      string PartOne(string input);
-      string PartTwo(string input);
+      string Solve(string input);
     }
 }

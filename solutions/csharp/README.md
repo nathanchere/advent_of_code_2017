@@ -6,4 +6,4 @@ Usage:
 
 `dotnet xunit`
 
-`dotnet run day01`
+`dotnet run day01a`
