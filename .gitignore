@@ -1,2 +1,7 @@
+# Python
 __pycache__
 .cache
+
+# .Net Core
+obj
+bin
