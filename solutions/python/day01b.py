@@ -4,7 +4,7 @@
 from common import *
 
 def solve(input):
-    result =0
+    result = 0
     input_size = len(input)
     offset = input_size * 0.5
     for x in range(len(input)):
