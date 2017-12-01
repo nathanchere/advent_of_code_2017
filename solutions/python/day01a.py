@@ -1,5 +1,5 @@
 # Advent of Code 2017
-# Day 01: "Inverse Captcha" (Python)
+# Day 01: "Inverse Captcha" Part 1 (Python)
 
 from common import *
 
