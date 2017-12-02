@@ -31,7 +31,14 @@ namespace Aoc2017
 
       protected string GetInput(string filename)
       {
-        return File.ReadAllText($"../..{filename}");
+        // because `dotnet run` is from project directory, but
+        /// `dotnet test` is from project/bin/Debug/netcoreapp2.0... FML...
+        var runPath = $"../../challenges/{filename}";
+        var testPath = $"../../../../../challenges/{filename}";
+        if(File.Exists(runPath))
+          return File.ReadAllText(runPath);
+        else
+          return File.ReadAllText(testPath);
       }
     }
 }
