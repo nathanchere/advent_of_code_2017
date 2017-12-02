@@ -20,11 +20,10 @@ namespace Aoc2017
     public abstract class Challenge
     {
       public abstract string Solve();
-      public abstract string InputFilename { get;}
 
-      protected string GetInput()
+      protected string GetInput(string filename)
       {
-        return File.ReadAllText($"{InputFilename}");
+        return File.ReadAllText($"{filename}");
       }
     }
 }
