@@ -18,6 +18,8 @@ Run specific solutions with e.g. `dotnet run day01b`
 
 Run tests with `dotnet test`
 
+PS: thanks to https://andrewlock.net/fixing-the-error-program-has-more-than-one-entry-point-defined-for-console-apps-containing-xunit-tests/ for salvaging my sanity while setting up the test project
+
 ### Elixir
 
 Solutions assume Elixir 1.5
@@ -25,6 +27,10 @@ Solutions assume Elixir 1.5
 ### Kotlin
 
 All Kotlin code is in `./solutions/kotlin`. Solutions assume Kotlin
+
+### LOLCODE
+
+OK seriously, fuck this language. Even for a joke just a turd.
 
 ### Python
 
