@@ -1,7 +1,18 @@
 # Python
-__pycache__
-.cache
+solutions/python/__pycache__
+solutions/python/.cache
 
 # .Net Core
-obj
-bin
+solutions/csharp/**/obj
+solutions/csharp/bin
+
+# Elixir
+solutions/elixir/**/_build
+solutions/elixir/**/deps
+solutions/elixir/**/.fetch
+solutions/elixir/**/erl_crash.dump
+solutions/elixir/**/*.ez
+
+# Misc
+thumbs.db
+.DS_Store
