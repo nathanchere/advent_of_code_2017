@@ -11,8 +11,12 @@
     <PackageReference Include="xunit" Version="2.3.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
     <PackageReference Include="System.Console" Version="4.*" />
+    <PackageReference Include="System.Linq" Version="4.*" />
+    <PackageReference Include="System.Runtime.Extensions" Vversion="2.*" />
     <PackageReference Include="System.IO.FileSystem"  Version="4.*" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.*" />
+
+    <Content Include="..\..\challenges\*.input*" CopyToPublishDirectory="Always" />
   </ItemGroup>
 
 </Project>

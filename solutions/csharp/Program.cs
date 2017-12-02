@@ -5,25 +5,26 @@ using System.Reflection;
 
 namespace Aoc2017
 {
-    class Program
+    public class Program
     {
-        static string GetInput(string day)
-        {
-          return File.ReadAllText($"../../challenges/{day}.input");
-        }
-
         static void Main(string[] args)
         {
           var day = args[0];
-          var type = Assembly.GetEntryAssembly().GetType("Aoc2017.day01");
-          var solution = (ISolution)Activator.CreateInstance(type);
-          var result = solution.Solve(GetInput(day));
+          var type = Assembly.GetEntryAssembly().GetType($"Aoc2017.{day}");
+          var challenge = (Challenge)Activator.CreateInstance(type);
+          var result = challenge.Solve();
           Console.WriteLine(result);
         }
     }
 
-    public interface ISolution
+    public abstract class Challenge
     {
-      string Solve(string input);
+      public abstract string Solve();
+      public abstract string InputFilename { get;}
+
+      protected string GetInput()
+      {
+        return File.ReadAllText($"{InputFilename}");
+      }
     }
 }
