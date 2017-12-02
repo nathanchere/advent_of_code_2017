@@ -9,9 +9,7 @@ namespace Aoc2017
 {
   public class day01a : Challenge
   {
-    public override string InputFilename => "day01.input";
-
-    public override string Solve() => Solve(GetInput());
+    public override string Solve() => Solve(GetInput("day01.input"));
 
     public string Solve(string input)
     {
@@ -38,6 +36,6 @@ namespace Aoc2017
     public void Example04() => Assert.Equal("9", Solve("91212129"));
 
     [Fact]
-    public void TrySolution() => Solve(GetInput());
+    public void TrySolution() => Solve();
   }
 }

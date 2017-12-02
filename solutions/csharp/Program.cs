@@ -9,7 +9,15 @@ namespace Aoc2017
     {
         static void Main(string[] args)
         {
+          if(args.Length == 0)
+          {
+            Console.WriteLine("Usage: dotnet run {challenge}");
+            Console.WriteLine("eg: dotnet run day01b");
+            return;
+          }
+
           var day = args[0];
+          Console.WriteLine(Directory.GetCurrentDirectory());
           var type = Assembly.GetEntryAssembly().GetType($"Aoc2017.{day}");
           var challenge = (Challenge)Activator.CreateInstance(type);
           var result = challenge.Solve();
@@ -23,7 +31,7 @@ namespace Aoc2017
 
       protected string GetInput(string filename)
       {
-        return File.ReadAllText($"{filename}");
+        return File.ReadAllText($"../..{filename}");
       }
     }
 }
