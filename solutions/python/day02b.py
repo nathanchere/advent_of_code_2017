@@ -13,25 +13,21 @@ def solve(input):
 def get_row_checksum(input):
     regex = re.compile("[^\t]+")
     values = list(map(int, regex.findall(input)))
-    for x in range(0,len(values)-1):
-        for y in range(x+1,len(values)-1):
+    for x in range(0,len(values)):
+        for y in range(x+1,len(values)):
             if values[x] == values[y]:
                 continue;
             if values[x] > values[y]:
                 result = values[x] / values[y]
             if values[y] > values[x]:
-                result = values[y] / values[x];
+                result = values[y] / values[x]
             if result % 1 == 0:
-                print('FOUND! x={}, y={}, result = {}'.format(values[x],values[y],result))
                 return result;
-    print("no match - {}".format(values))
-    return 0;
-
 
 class Tests():
     import pytest
 
-    def test_example_1(x):
+    def test_example(x):
         assert solve(get_example_input('day02b')) == 18
 
     def test_solve(x):
