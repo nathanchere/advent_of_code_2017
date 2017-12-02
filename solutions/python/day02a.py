@@ -1,5 +1,5 @@
 # Advent of Code 2017
-# Day 02: "Checksum Corruption" Part 1 (Python)
+# Day 02: "Corruption Checksum" Part 1 (Python)
 
 from common import *
 import re
@@ -27,7 +27,7 @@ class Tests():
     import pytest
 
     def test_example_1(x):
-        assert solve(get_example_input('day02')) == 18
+        assert solve(get_example_input('day02a')) == 18
 
     def test_solve(x):
         assert solve(get_input('day02'))
