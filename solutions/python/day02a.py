@@ -26,7 +26,7 @@ def get_row_difference(input):
 class Tests():
     import pytest
 
-    def test_example_1(x):
+    def test_example(x):
         assert solve(get_example_input('day02a')) == 18
 
     def test_solve(x):
