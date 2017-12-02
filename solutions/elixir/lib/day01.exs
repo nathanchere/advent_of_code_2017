@@ -3,26 +3,26 @@
 
 defmodule Day01A do
 
-  import Common
-
-  def main(filename) do
-    Common.get_input(filename)
-    |> IO.puts
+  def solve(input) do
+    "OK"
   end
 end
 
 ExUnit.start
-
 defmodule Day01ATests do
   use ExUnit.Case
 
+  import Common
+
   test "Example" do
-    assert Day01.main() == :world
+    assert Day01A.solve("1122") == 3
   end
 
   test "Solution" do
-    assert Day01.main() == :world
+    input=Common.get_input("day01.input")
+    Day01A.solve(input)
   end
 end
-
-Day01A.main("day01.input")
+#
+# Day01A.solve("day01.input")
+# |> IO.puts
