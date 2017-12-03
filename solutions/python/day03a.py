@@ -8,7 +8,7 @@ def solve(input):
     print("---------------------")
     print("Doing : {}".format(input))
     steps=1
-    squareof=2
+    squareof=1
     while squareof*squareof <= input:
         steps+=1
         squareof+=2
@@ -38,9 +38,9 @@ class Tests():
         assert solve(265149)
 
 if __name__ == "__main__":
-    print(3)
-    print(9)
-    print(15)
-    #print(265149)
+    print(solve(3))
+    print(solve(9))
+    print(solve(15))
+    #print(solve(265149))
 
 
