@@ -31,15 +31,17 @@ def solve(input):
     while newtarget >= startcount + sidelength:
         newtarget -= sidelength
 
+    balancepoint=startcount+(int(0.5*sidelength)) -1
+    print('newtarget: {}, balancepoint={}'.format(newtarget,balancepoint))
+
     stepsx = steps-1
 
-    balancepoint=startcount+(int(0.5*sidelength))
     if newtarget > balancepoint:
         stepsy =  newtarget - balancepoint
     else:
         stepsy = balancepoint - newtarget
 
-    print('newtarget: {}, stepsx={}, stepsy={}'.format(newtarget, stepsx, stepsy))
+    print('stepsx={}, stepsy={}'.format(stepsx, stepsy))
     print('result: {} steps'.format(stepsx+stepsy))
     return stepsx+stepsy
 
@@ -63,6 +65,6 @@ if __name__ == "__main__":
     print(solve(3))
     print(solve(9))
     print(solve(15))
-    #print(solve(265149))
+    print(solve(265149))
 
 
