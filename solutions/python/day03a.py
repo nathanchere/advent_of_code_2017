@@ -5,6 +5,9 @@ from common import *
 import re
 
 def solve(input):
+    if input == 1:
+        return 1
+
     print("---------------------")
     print("Doing : {}".format(input))
     steps=1
@@ -15,7 +18,7 @@ def solve(input):
     print('{} {} {}'.format(steps, squareof, squareof*squareof))
 
     squaredval = squareof*squareof
-    outersteps = squaredval - ((squareof-1)*(squareof-1))
+    outersteps = squaredval - ((squareof-2)*(squareof-2))
 
     print('uppertbound: {} stepsinrow: {}'.format(squaredval, outersteps))
 
