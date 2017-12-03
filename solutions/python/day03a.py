@@ -12,17 +12,36 @@ def solve(input):
     print("Doing : {}".format(input))
     steps=1
     squareof=1
-    while squareof*squareof <= input:
+    while squareof*squareof < input:
         steps+=1
         squareof+=2
-    print('{} {} {}'.format(steps, squareof, squareof*squareof))
-
     squaredval = squareof*squareof
+
+    print('steps:{} squareof:{} squaredval:{}'.format(steps, squareof, squareof*squareof))
+
     outersteps = squaredval - ((squareof-2)*(squareof-2))
+    startcount = squaredval - outersteps + 1
+    sidelength = int(outersteps * 0.25)
 
-    print('uppertbound: {} stepsinrow: {}'.format(squaredval, outersteps))
+    # 2-axis symmetrical from here so don't care which side it comes from
 
-    return squareof
+    print('uppertbound: {} stepsinrow: {}, startfrom: {}, sidelength: {}'.format(squaredval, outersteps, startcount, sidelength))
+
+    newtarget = input
+    while newtarget >= startcount + sidelength:
+        newtarget -= sidelength
+
+    stepsx = steps-1
+
+    balancepoint=startcount+(int(0.5*sidelength))
+    if newtarget > balancepoint:
+        stepsy =  newtarget - balancepoint
+    else:
+        stepsy = balancepoint - newtarget
+
+    print('newtarget: {}, stepsx={}, stepsy={}'.format(newtarget, stepsx, stepsy))
+    print('result: {} steps'.format(stepsx+stepsy))
+    return stepsx+stepsy
 
 
 class Tests():
