@@ -1,16 +1,23 @@
 # Advent of Code 2017
-# Day 02: "Corruption Checksum" Part 1 (Python)
+# Day 03: "Spiral Memory" Part 1 (Python)
 
 from common import *
 import re
 
 def solve(input):
+    print("---------------------")
+    print("Doing : {}".format(input))
     steps=1
     squareof=2
     while squareof*squareof <= input:
         steps+=1
         squareof+=2
     print('{} {} {}'.format(steps, squareof, squareof*squareof))
+
+    squaredval = squareof*squareof
+    outersteps = squaredval - ((squareof-1)*(squareof-1))
+
+    print('uppertbound: {} stepsinrow: {}'.format(squaredval, outersteps))
 
     return squareof
 
@@ -31,6 +38,9 @@ class Tests():
         assert solve(265149)
 
 if __name__ == "__main__":
-    print(solve(get_input(265149)))
+    print(3)
+    print(9)
+    print(15)
+    #print(265149)
 
 
