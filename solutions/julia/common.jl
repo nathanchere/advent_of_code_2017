@@ -4,3 +4,7 @@ function getInput(challenge)
         return content
     end
 end
+
+function isTest()
+    return length(ARGS) > 0 && ARGS[1] == "test"
+end

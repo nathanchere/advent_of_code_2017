@@ -1,21 +1,18 @@
 # Advent of Code 2017
 # Day 01: "Inverse Captcha" Part 1 (Julia)
 
+using Base.Test
 include("common.jl")
 
+function solve(input)
+    println(input)
+end
 
-input = getInput("day01.input")
-println(input)
-
-# using JLTest
-# @testcase begin
-#     @casename "Example"
-#     @test begin
-#         @testname "A Simple Test" #Name of test (optional)
-#         @assertEqual(1,1)
-#     end
-#     @test begin
-#         @testname "Real test"
-#         @assertEqual(2,1)
-#     end
-# end
+if isTest()
+    @testset "Foo Tests" begin
+        @test solve(getInput("day01.input.example"))
+        @test solve(getInput("day01.input")) == nothing
+    end
+else
+    solve("day1.input")
+end
