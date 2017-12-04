@@ -16,3 +16,4 @@ solutions/elixir/**/*.ez
 # Misc
 thumbs.db
 .DS_Store
+bin
