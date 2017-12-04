@@ -1,18 +1,15 @@
 # Advent of Code 2017
 # Day 01: "Inverse Captcha" Part 1 (Julia)
 
-using Base.Test
 include("common.jl")
 
 function solve(input)
     return 0
 end
 
-if isTest()
-    @testset "Foo Tests" begin
-        @test solve(getInput("day01.input.example"))
-        @test solve(getInput("day01.input")) == nothing
-    end
-else
-    solve("day1.input")
-end
+
+@do_test getInput("day01.input.example") 0
+@do_test getInput("day01.input") 0
+
+@do_solve getInput("day01.input")
+
