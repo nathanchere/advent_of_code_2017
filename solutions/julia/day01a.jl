@@ -5,7 +5,7 @@ using Base.Test
 include("common.jl")
 
 function solve(input)
-    println(input)
+    return 0
 end
 
 if isTest()
