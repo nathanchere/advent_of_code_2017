@@ -12,7 +12,7 @@ function isTest()
     return length(ARGS) > 0 && ARGS[1] == "test"
 end
 
-macro do_test(input, expected=nothing)
+macro do_test(input, expected)
     return :(
         if isTest()
             @test solve($input) == expected
@@ -22,7 +22,9 @@ end
 
 macro do_solve(input)
     return :(
-        if !isTest()
+        if isTest()
+            @test solve($input) == nothing
+        else
             println(solve($input))
         end
     )

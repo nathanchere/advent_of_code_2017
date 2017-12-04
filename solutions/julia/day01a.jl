@@ -9,7 +9,6 @@ end
 
 
 @do_test getInput("day01.input.example") 0
-@do_test getInput("day01.input") 0
 
 @do_solve getInput("day01.input")
 
