@@ -1,15 +1,10 @@
 # Advent of Code 2017
 # Day 01: "Inverse Captcha" Part 1 (Julia)
 
-# include("common.jl")
+include("common.jl")
 
-function getInput(challenge)
-    open("../../challenges/day01.input") do f
-        content=readstring(f)
-        return content
-    end
-end
-input = getInput("day01a")
+
+input = getInput("day01.input")
 println(input)
 
 # using JLTest

@@ -1,13 +1,6 @@
-module AocCommon
-
-export getInput
-
-function getInput()
-    println("pol")
-    # open("sherlock-holmes") do f
-    # content=readstring(f)
-    # println(f)
-    # return f
-end
-
+function getInput(challenge)
+    open("../../challenges/$challenge") do f
+        content=readstring(f)
+        return content
+    end
 end
