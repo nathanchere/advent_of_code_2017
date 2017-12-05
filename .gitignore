@@ -1,17 +1,17 @@
 # Python
-solutions/python/__pycache__
-solutions/python/.cache
+*/python/__pycache__
+*/python/.cache
 
 # .Net Core
-solutions/csharp/**/obj
-solutions/csharp/bin
+*/*sharp/**/obj
+*/*sharp/**/bin
 
 # Elixir
-solutions/elixir/**/_build
-solutions/elixir/**/deps
-solutions/elixir/**/.fetch
-solutions/elixir/**/erl_crash.dump
-solutions/elixir/**/*.ez
+*/elixir/**/_build
+*/elixir/**/deps
+*/elixir/**/.fetch
+*/elixir/**/erl_crash.dump
+*/elixir/**/*.ez
 
 # Misc
 thumbs.db
