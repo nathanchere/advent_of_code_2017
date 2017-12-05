@@ -1,14 +1,24 @@
 // Advent of Code 2017
 // Day 01: "Inverse Captcha" Part 1 (F#)
 
-module Day01A
+#r "Expecto.dll"
 
-#load "common.fsx"
+open System
+open System.IO
+open Expecto
 
-let solve input = raise (System.NotImplementedException("Just die!"))
+let getInput challenge =
+  sprintf "../../challenges/%s" challenge
+    |> File.ReadAllLines
+    |> String.concat("")
 
-solve("day01.input")
+module Day01A =
 
-[<Fact>]
-let ``Example`` () = Assert.True(true)
-let ``Solve`` () = Assert.True(true)
+  let solve input =
+    printfn "%s" input
+
+  [<Tests>]
+  let myTests =
+    testCase "will run" <| fun () -> Expect.equal (2+2) 4 "2+2"
+
+Day01A.solve(getInput("day01.input"))
