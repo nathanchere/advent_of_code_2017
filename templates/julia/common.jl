@@ -27,6 +27,12 @@ macro do_solve(input)
     return :(
         if isTest()
             @test solve($input) != nothing
+
+            # Because Julia's Base.Test only gives a result when tests fail,
+            #  and because it stops processing when the first test fails, this
+            #  at least gives us some feedback when tests pass.
+            println("Tests passed!")
+
         else
             println(solve($input))
         end
